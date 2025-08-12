@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* shared styles */
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    margin: 0;
+}
+
+:root {
+    --orange: rgba(230, 83, 60, 1);
+    --color1: rgba(255, 255, 255, 1);
+    --color2: rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--orange);
+    color: var(--color1);
+    padding: 8px 20px 8px 20px;
+    border-radius: 46px;
+    border: none;
+}
+
+.btn-primary:hover {
+    color: var(--orange);
+    background-color: var(--color1);
+}
+
+.btn-download {
+    color: var(--color1);
+    border: 2px solid var(--color1);
+    box-sizing: border-box;
+    border-radius: 42px;
+    padding: 8px 20px 8px 20px;
+    background: transparent;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn-download:hover {
+    color: var(--orange);
+    /* border: 2px solid var(--orange); */
+    background-color: var(--color1);
+
+}
+
+
+/* header-section */
+header {
+    background-color: rgba(48, 48, 48, 0.54);
+    background: linear-gradient(180.00deg, rgba(17.411699295043945, 17.411699295043945, 17.411699295043945, 1), rgba(119.41169738769531, 119.41169738769531, 119.41169738769531, 0) 100%);
+    background: linear-gradient(rgba(17, 17, 17, 1));
+    padding: 59px 150px 20px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.header-name {
+    color: var(--orange);
+    font-size: 36px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    gap: 33px;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.nav-btn {
+    display: flex;
+    gap: 10px;
+}
+
+/* banner-section */
+.banner {
+    display: flex;
+    justify-content: space-between;
+    gap: 34px;
+    align-items: center;
+    /* padding: 30px 160px 40px; */
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 550px;
+}
+
+.hamburger-icon{
+    color: var(--color1);
+    display: none;
+}
+
+.banner-title {
+    font-size: 78px;
+    font-weight: 400;
+    color: var(--color1);
+}
+
+.banner-description {
+    color: var(--color2);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color1);
+}
+
+.img-card {
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    /* background: transparent; */
+    backdrop-filter: blur(5px);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+}
+
+.img-card h3 {
+    color: var(--color1);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.img-card h1 {
+    color: var(--color1);
+    font-size: 44;
+    font-weight: 800;
+}
+
+.img-card p {
+    color: var(--color2);
+}
+
+
+#card-one {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    top: -150px;
+    left: -100px;
+
+}
+
+#card-two {
+    position: relative;
+    top: -580px;
+    left: 190px;
+}
+
+@media screen and (max-width: 576px) {
+
+    /* header section */
+    header {
+        padding: 20px;
+    }
+
+
+    /* nav styles */
+
+    nav{
+        flex-direction: start;
+    }
+   
+    .hamburger{
+        display: flex;
+        align-items: center;
+        gap: 152px;
+    }
+
+    .hamburger-icon{
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+
+    /* banner-section */
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner-content {
+        width: 100%;
+    }
+
+    .banner-title {
+        font-size: 43px;
+    }
+
+    .btn-download,
+    .btn-primary {
+        font-size: 11px;
+    }
+
+    .banner-img img{
+        width: 100%;
+    }
+
+    .ball{
+        width: 25px;
+        height: 25px;
+    }
+
+    .img-card{
+        width: 100px;
+        padding: 10px;
+    }
+
+    .img-card h1{
+        font-size: 20px;
+    }
+
+    .img-card h3{
+        font-size: 14px;
+    }
+
+    .img-card p{
+        font-size: 10px;
+        font-weight: 400;
+    }
+
+    #card-one{
+        left: auto;
+    }
+
+    #card-two{
+        top: -500px;
+        right: -250px;
+        
+    }
+}
