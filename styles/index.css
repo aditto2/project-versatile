@@ -15,7 +15,23 @@
     --color2: rgba(255, 255, 255, 0.5);
 }
 
+.text-center {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--color1);
+}
+
+.section-description {
+    color: var(--color2);
+
+}
+
 .btn-primary {
+    /* width: 154px; */
     font-size: 18px;
     font-weight: 400;
     background-color: var(--orange);
@@ -49,6 +65,13 @@
 
 }
 
+/* main */
+main {
+    background-color: rgba(48, 48, 48, 0.54);
+    background: linear-gradient(rgba(17, 17, 17, 1));
+    padding-bottom: 50px;
+}
+
 
 /* header-section */
 header {
@@ -69,6 +92,11 @@ header {
     color: var(--orange);
     font-size: 36px;
     font-weight: 600;
+}
+
+.hamburger-icon {
+    color: var(--color1);
+    display: none;
 }
 
 nav ul {
@@ -107,11 +135,6 @@ nav li a {
     flex-direction: column;
     gap: 28px;
     width: 550px;
-}
-
-.hamburger-icon{
-    color: var(--color1);
-    display: none;
 }
 
 .banner-title {
@@ -182,7 +205,168 @@ nav li a {
     left: 190px;
 }
 
+/* habit-section */
+.habits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 150px 100px;
+    background-color: rgba(48, 48, 48, 0.54);
+    background: linear-gradient(rgba(17, 17, 17, 1));
+}
+
+.habit-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 500px;
+    margin: 0 auto 22px;
+}
+
+.habit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    width: 231px;
+}
+
+.habit-img img {
+    border-radius: 50%;
+    /* width: 270px; */
+}
+
+.habit-card-title {
+    color: var(--color1);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.habit-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 44px;
+}
+
+/* extra-mile-section */
+.extra-mile {
+    display: flex;
+    align-items: center;
+    gap: 54px;
+    border-radius: 18px;
+    background: rgba(34, 34, 34, 1);
+    margin: 100px 150px 50px;
+    padding: 50px;
+}
+
+.extra-mile-content {
+    width: 443px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.extra-mile-content button {
+    width: 224px;
+}
+
+.extra-mile-img img {
+    width: 366px;
+    border-radius: 18px;
+}
+
+
+/* Calculator-section */
+
+.calculator {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: rgba(34, 34, 34, 1);
+    padding: 50px 180px;
+}
+
+.BMI-header {
+    width: 600px;
+    padding: 70px 190px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding-bottom: 50px;
+}
+
+/* table part */
+.calculator-chart h3,
+.my-BMI h3 {
+    font-size: 28px;
+    padding-bottom: 22px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid var(--color2);
+    padding: 14px 24px 14px 14px;
+}
+
+th {
+    text-align: left;
+}
+
+.table-title {
+    color: var(--color1);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* BMI part */
+.my-BMI {
+    width: 500px;
+}
+
+form input[type="text"],
+input[type="number"],
+select {
+    /* width: 100%; */
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 13px 50px 13px 20px;
+}
+
+form {
+    padding-top: 12px;
+    padding-bottom: 22px;
+}
+
+form select,
+form option {
+    color: var(--color2);
+    width: 100%;
+}
+
+.input-one {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.my-BMI button{
+    width: 250px;
+}
+
+
 @media screen and (max-width: 576px) {
+
+    /* shared-styles */
+    .section-title {
+        font-size: 38px;
+    }
 
     /* header section */
     header {
@@ -192,17 +376,17 @@ nav li a {
 
     /* nav styles */
 
-    nav{
+    nav {
         flex-direction: start;
     }
-   
-    .hamburger{
+
+    .hamburger {
         display: flex;
         align-items: center;
         gap: 152px;
     }
 
-    .hamburger-icon{
+    .hamburger-icon {
         display: flex;
     }
 
@@ -229,40 +413,108 @@ nav li a {
         font-size: 11px;
     }
 
-    .banner-img img{
+    .banner-img img {
         width: 100%;
     }
 
-    .ball{
+    .ball {
         width: 25px;
         height: 25px;
     }
 
-    .img-card{
+    .img-card {
         width: 100px;
         padding: 10px;
     }
 
-    .img-card h1{
+    .img-card h1 {
         font-size: 20px;
     }
 
-    .img-card h3{
+    .img-card h3 {
         font-size: 14px;
     }
 
-    .img-card p{
+    .img-card p {
         font-size: 10px;
         font-weight: 400;
     }
 
-    #card-one{
+    #card-one {
         left: auto;
     }
 
-    #card-two{
+    #card-two {
         top: -500px;
         right: -250px;
-        
+
+    }
+
+    /* responsive habit section */
+
+    .habits {
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .habit-content {
+        width: 100%;
+    }
+
+    .habit-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* extra-mile-section */
+    .extra-mile {
+        margin: 10px;
+        padding: 22px;
+        flex-direction: column;
+    }
+
+    .extra-mile-content,
+    .extra-mile-img img {
+        width: 100%;
+    }
+
+    /* calculator-section */
+    .BMI-header {
+        width: auto;
+        padding: 20px;
+        /* display: grid; */
+    }
+
+    .calculator {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .my-BMI {
+        width: 100%;
+    }
+
+    form input[type="text"],
+    input[type="number"],
+    select {
+        width: calc(50% - 20px);
+        /* border: none;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 13px 50px 13px 20px; */
+    }
+
+    form select,
+    form option { 
+        width: 50%;
+    }
+
+    #last-option{
+        width: 100%;
+    }
+
+    .my-BMI button{
+        width: 50%;
     }
 }
