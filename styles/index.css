@@ -66,7 +66,7 @@
 }
 
 /* main */
-main {
+main,footer {
     background-color: rgba(48, 48, 48, 0.54);
     background: linear-gradient(rgba(17, 17, 17, 1));
     padding-bottom: 50px;
@@ -431,7 +431,46 @@ form option {
     right: -33px;
 }
 
+/* footer */
+.footer-banner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 66px 190px;
+    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(48, 48, 48, 0.54);
+    background: linear-gradient(rgba(17, 17, 17, 1));
+}
 
+.footer-content {
+    width: 444px;
+}
+
+.footer-content h1 {
+    padding-bottom: 20px;
+}
+
+.started h3 {
+    font-size: 32px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.started li {
+    color: var(--color2);
+    list-style: none;
+}
+
+footer .hr {
+    color: var(--color2);
+    /* width: 800px; */
+    margin: 0 150px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer{
+    text-align: center;
+    margin: 20px auto;
+}
 
 @media screen and (max-width: 576px) {
 
@@ -590,6 +629,7 @@ form option {
         width: 50%;
     }
 
+    /* team section */
     .team {
         margin: 22px;
     }
@@ -613,8 +653,22 @@ form option {
         width: 100%;
     }
 
-    .member-info{
+    .member-info {
         right: -10px;
     }
 
+    /* footer-section */
+    .footer-banner {
+        padding: 22px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .footer-content {
+        width: 100%;
+    }
+
+    footer .hr{
+        margin: 0 20px;
+    }
 }
